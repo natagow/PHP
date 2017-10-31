@@ -17,6 +17,5 @@ Ensuite, à la ligne suivante, initie une variable qui décrive ta famille (avec
     $eyes_color = brun;
     $famille = array (0 => Abdallah , 1 => Marie-louise , 2 => Mehdi);
     ?>
-
   </body>
 </html>
