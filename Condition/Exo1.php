@@ -19,5 +19,4 @@ if ($hour >= 500 and $hour <= 900) {
 } elseif ($hour > 2100 and $hour <= 500) {
     echo "bonne nuit";
 }
-;
 ?>
