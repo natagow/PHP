@@ -4,75 +4,73 @@
     Si l'âge est entre 12 et 18 ans et que l'utilisateur répond "yes", affiche "Hello Teenage boy!" ou "Hello Teenage girl!" selon son genre.
     Si l'âge est entre 18 et 115 ans et que l'utilisateur répond "yes", affiche "Hello Sir!" ou "Hello Lady!" selon son genre. - Si l'âge est supérieur à 115 ans et que l'utilisateur répond "yes", affiche "Wow! Still alive, old man?" ou "old lady?" selon son genre. -->
 
-
-
-<!DOCTYPE html>
+    <!DOCTYPE html>
     <html>
       <head>
-        <meta charset="utf-8">
-        <title></title>
+        <title>Exo 4</title>
       </head>
       <body>
-        <form action="Exo3.php" method="get">
-          Quel est ton âge ?:<br>
-          <input type="text" name="age">
-            <br>
-          <input type="submit" value="Submit">
-            <br>
-          Femme
-            <input type="radio" name="sex" value="Femme">
-          Homme
-          <input type="radio" name="sex" value="Homme">
+        <form action="" method="get">
+          <input type="number" name="age">
+          <br>
+          <input type="radio" name="sex" value="homme">
+          homme
+          <input type="radio" name="sex" value="femme">
+          femme
+          <br>
           Parles-tu anglais ?
-          <input type="radio" name="langue" value="yes">
+          <input type="radio" name="lang" value="oui">
+          oui
+          <input type="radio" name="lang" value="non">
+          non
         </form>
-
-            <?php
-              $age = $_GET["age"];
-
-              $sex = $_GET["sex"];
-
-              $lan = $_GET["langue"]
-
-                if ($age > 0 and $age < 12) {
-                  if ($lan == true and $sex == "Femme") {
-                      echo "Hello girly";
-                  } else {
-                      echo "Hello manly";
-                    }
-                    if ($sex == "Femme") {
-                      echo "Salut la mioche";
+          <?php
+            $lang = $_GET["lang"];
+            $age = $_GET["age"];
+            $sex = $_GET["sex"];
+              if ($age < 12) {
+                if($lang == "oui"){
+                  if($sex == "homme")
+                    echo "Hello boy!";
+                    else echo "Hello Girl!";
+              } else {
+                if($lang == "homme")
+                    echo "Salut petit!";
+                    else echo "Salut petite!";
                   }
-                    else {
-                      echo "Salut le mioche"; }
+        }
+                elseif ($age >= 12 and $age <= 18) {
+                    if($lang == "oui"){
+                    if($sex == "homme")
+                    echo "Hello Teenage boy!";
+                    else echo "Hello Teenage girl!";
+              } else {
+                if($sex == "homme")
+                echo "Salut l'adolescent!";
+                else echo "Salut l'adolescente!";
                   }
-                
-
-            // elseif ($age >= 12 and $age < 18) {
-            //       if ($sex == "Femme") {
-            //         echo "Bonjour Mademoiselle ! un 06 ?";
-            //       }
-            //       else {
-            //         echo "Bien ou bien ?";
-            //       }
-            //   }
-            //   elseif ($age >= 18 and $age < 115) {
-            //       if ($sex == "Femme") {
-            //         echo "Bonjour madame, vous voudriez vous un carambar";
-            //       }
-            //       else {
-            //         echo "Bonjour monsieur, voici vos impots";
-            //       }
-            //   }
-            //   elseif ($age >= 115) {
-            //       if ($age == "Femme") {
-            //         echo "Vivante ? eh bé";
-            //       }
-            //       else {
-            //         echo "Nan toi t'es déjà mort c'est sur..";
-            //       }
-            //   }
-            //
-            // ?>
+        }
+                elseif ($age > 18 and $age <= 115) {
+                    if($lang == "oui"){
+                    if($sex == "homme") echo "Hello Sir!";
+                    else echo "Hello Lady!";
+              } else {
+                if($sex == "homme")
+                echo "Salut l'adulte!";
+                else echo "Salut l'adulte!";
+                  }
+        }
+                elseif ($age > 115) {
+                    if($lang == "oui"){
+                    if($sex == "homme")
+                    echo "Wow! Still alive, old man?";
+                    else echo "Wow! Still alive, old lady?";
+              } else {
+                if($sex == "homme")
+                echo "Wow! Toujours vivant?";
+                else echo "Wow! Toujours vivante?";
+                  }
+        }
+        ?>
       </body>
     </html>
