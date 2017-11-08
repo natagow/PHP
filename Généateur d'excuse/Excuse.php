@@ -7,3 +7,9 @@
         décès de l'animal de compagnie (ou d'un membre de la famille)
         activité extra-scolaire importante
         toute autre excuse de ton choix -->
+
+<?php
+$nom = $_GET["nom"];
+$inst = $_GET["inst"];
+$excu = $_GET["excuse"];
+  if?>
