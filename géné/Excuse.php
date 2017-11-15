@@ -46,9 +46,9 @@
          ?>
         <body>
           <form name="excuses" method="post" action="excuses.php">
-            Nom de l'enfant : <input type="text" name="name"/><br/>
-            Nom du prof : <input type="radio" name="genre" value="1" id="genre1"/><label for="genre1">Mme.</label><input type="radio" name="genre" value="2" id="genre2"/><label for="genre2">M.</label><input type="text" name="prof"/><br/>
-            Raison de l'absence : <input type="radio" name="excuse" value="1" id="raison1"/><label for="raison1">Maladie</label>
+            Entrez le nom de l'enfant : <input type="text" name="name"/><br/>
+            Entrez le nom du prof : <input type="radio" name="genre" value="1" id="genre1"/><label for="genre1">Mme.</label><input type="radio" name="genre" value="2" id="genre2"/><label for="genre2">M.</label><input type="text" name="prof"/><br/>
+            Entrez une raison d'absence : <input type="radio" name="excuse" value="1" id="raison1"/><label for="raison1">Maladie</label>
             <input type="radio" name="excuse" value="2" id="raison2"/><label for="raison2">décès de l'animal de compagnie (ou d'un membre de la famille)</label>
             <input type="radio" name="excuse" value="3" id="raison3"/><label for="raison3">activité extra-scolaire importante</label>
             <input type="radio" name="excuse" value="4" id="raison4"/><label for="raison4">autre</label><br/>
