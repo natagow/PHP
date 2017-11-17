@@ -108,3 +108,24 @@ for ($i = 0; $i <= $taille_tableau; $i++) {
 
  <!-- Crée un tableau contenant au moins 10 pays du monde. Une fois fait, utilise une boucle pour générer du html correspondant à une selectbox permettant à un utilisateur d'indiquer son pays dans un formulaire html.
 A présent, modifie ton tableau contenant les pays pour qu'il soit un tableau associatif: la clef est le code ISO du pays, la valeur étant le nom du pays: par exemple: $pays = array('BE'=>'Belgique'); au lieu de simplement $pays = array('Belgique');. Utilise la clef pour qu'elle devienne la valeur de la balise option dans ton html. -->
+<?php
+$pays = ['AU'=>'Autriche','BE'=>'Belgique','CA'=>'Cambodge','EG'=>'Egypte','FI'=>'Fidji','GU'=>'Guadeloupe','IS'=>'Islande','LI'=>'Liban','MA'=>'Malte','NE'=>'Nepal'];
+
+echo '<pre>';
+print_r($pays);
+echo '</pre>';
+
+echo'<br/>';
+echo 'Choisissez le pays que vous souhaitez visiter : <br/>';
+echo '<select>';
+
+foreach ($pays as $iso => $nom_pays)
+{
+    echo '<option value ="'.$iso.'">'.$nom_pays.'</option>';
+}
+echo '</select>';
+
+echo'<br/>';
+echo'<br/>';
+
+?>
